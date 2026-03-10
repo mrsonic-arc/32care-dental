@@ -53,7 +53,7 @@ nav { background:white; border-bottom:1px solid var(--border); position:sticky; 
 .hslide img { width:100%; height:88vh; object-fit:cover; display:block; }
 .hslide::after { content:''; position:absolute; inset:0; background:linear-gradient(110deg,rgba(15,15,15,0.88) 0%,rgba(15,15,15,0.55) 55%,rgba(15,15,15,0.15) 100%); }
 
-.hero-content { position:relative; z-index:2; padding:0 5%; max-width:700px; }
+.hero-content { position:relative; z-index:2; padding:0 5%; max-width:700px; padding-bottom:130px; }
 .hero-pill {
   display:inline-flex; align-items:center; gap:0.5rem;
   background:rgba(232,101,10,0.18); border:1px solid rgba(232,101,10,0.4);
@@ -76,17 +76,19 @@ nav { background:white; border-bottom:1px solid var(--border); position:sticky; 
 
 /* Hero mini cards */
 .hero-cards {
-  position:absolute; bottom:2.5rem; left:5%; right:5%; z-index:2;
-  display:flex; gap:1rem; flex-wrap:wrap;
+  position:absolute; bottom:2rem; left:5%; right:5%; z-index:2;
+  display:flex; gap:0.75rem; flex-wrap:nowrap; justify-content:flex-start;
+  pointer-events:none;
 }
 .hc {
-  background:rgba(255,255,255,0.1); backdrop-filter:blur(12px);
-  border:1px solid rgba(255,255,255,0.2); border-radius:10px;
-  padding:0.7rem 1.2rem; display:flex; align-items:center; gap:0.6rem;
+  background:rgba(0,0,0,0.45); backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,0.15); border-radius:8px;
+  padding:0.55rem 1rem; display:flex; align-items:center; gap:0.5rem;
+  pointer-events:auto;
 }
 .hc-icon { font-size:1.2rem; }
-.hc-label { font-size:0.72rem; color:rgba(255,255,255,0.55); line-height:1.2; }
-.hc-val { font-size:0.88rem; font-weight:700; color:white; }
+.hc-label { font-size:0.65rem; color:rgba(255,255,255,0.5); line-height:1.2; }
+.hc-val { font-size:0.8rem; font-weight:700; color:white; }
 
 /* Slider controls */
 .slide-dots { position:absolute; top:45%; right:2%; transform:translateY(-50%); z-index:3; display:flex; flex-direction:column; gap:0.45rem; }
